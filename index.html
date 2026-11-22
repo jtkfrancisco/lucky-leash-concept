@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lucky Leash | Dog Walking in North Toronto</title>
+<meta name="description" content="Group walks from $30, private walks and dog sitting around Yonge and Lawrence, North Toronto. Daily photo updates. Text 437-776-5003 to book a meet-and-greet.">
+<link rel="icon" href="img/paw-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Lucky Leash Dog Walking",
+  "url": "https://www.luckyleash.ca/",
+  "telephone": "+1-437-776-5003",
+  "email": "LuckyLeashAdventures@gmail.com",
+  "image": "https://www.luckyleash.ca/img/pom.jpg",
+  "priceRange": "$30–$75",
+  "areaServed": ["Lawrence Park", "Bedford Park", "Lawrence Manor", "Ledbury Park", "Sherwood Park", "Forest Hill North", "North Toronto"],
+  "address": {"@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA"},
+  "makesOffer": [
+    {"@type": "Offer", "name": "Group walk", "price": "30", "priceCurrency": "CAD"},
+    {"@type": "Offer", "name": "Private walk", "price": "45", "priceCurrency": "CAD"},
+    {"@type": "Offer", "name": "Dog sitting", "price": "75", "priceCurrency": "CAD"}
+  ]
+}
+</script>
+<style>
+:root{
+  --cream:#FFFEF9;
+  --sand:#F6F1E6;
+  --ink:#2F2B26;
+  --soft:#6B645B;
+  --line:#E4DDCF;
+  --paw:#E9E2D3;
+  --pink:#C9416E;        /* the one accent: booking */
+  --pink-dark:#A92F59;
+  --gut:clamp(20px,5vw,72px);
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 18px/1.55 Jost,"Futura",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3{font-weight:400;letter-spacing:-.01em;line-height:1.05;text-wrap:balance}
+p,blockquote{text-wrap:pretty}
+h2{font-size:clamp(36px,4.6vw,60px);margin-bottom:40px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;border-radius:999px;font:500 17px Jost,sans-serif;text-decoration:none;transition:background .2s,transform .2s;white-space:nowrap}
+.btn-book{background:var(--pink);color:#fff}
+.btn-book:hover{background:var(--pink-dark);transform:translateY(-1px)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--cream)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,254,249,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.scrolled{border-bottom-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:76px}
+.bar .brand img{height:30px;width:auto}
+.bar nav{display:flex;align-items:center;gap:32px;font-size:16px}
+.bar nav a.link{text-decoration:none;color:var(--soft)}
+.bar nav a.link:hover{color:var(--ink)}
+.bar .btn{height:44px;padding:0 22px;font-size:15px}
+
+/* hero */
+.hero{position:relative;isolation:isolate;padding:40px 0 96px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.hero-mark{width:84px;margin-bottom:32px}
+.hero h1{font-size:clamp(44px,5vw,76px);line-height:.98;letter-spacing:-.02em;margin-bottom:28px}
+.hero p.lede{font-size:clamp(19px,1.6vw,22px);color:var(--soft);max-width:30ch;margin-bottom:40px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero .from{margin-top:28px;font-size:16px;color:var(--soft)}
+.hero .from strong{color:var(--ink);font-weight:500}
+.photo{position:relative}
+.photo img{width:100%;height:min(74vh,680px);object-fit:cover;object-position:50% 38%;border-radius:28px}
+.trail{position:absolute;pointer-events:none;opacity:.09;z-index:0}
+.hero .trail{width:520px;right:-230px;bottom:-200px;z-index:-1}
+.hero .trail.two{left:-250px;top:-120px;right:auto;bottom:auto;width:420px;transform:rotate(180deg)}
+
+/* services: a price list, not cards */
+#services{padding:112px 0 96px;background:var(--sand)}
+.list{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(220px,1fr) 1.6fr auto;gap:40px;padding:40px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row h3{font-size:clamp(28px,2.8vw,38px)}
+.row .desc{color:var(--soft);max-width:52ch}
+.row .desc b{color:var(--ink);font-weight:500}
+.row .price{font-size:clamp(34px,3.4vw,46px);line-height:1;text-align:right}
+.row .price small{display:block;font-size:14px;color:var(--soft);margin-top:8px;letter-spacing:.02em}
+.note{margin-top:28px;color:var(--soft);font-size:16px}
+
+/* reviews */
+#reviews{position:relative;padding:120px 0;overflow:hidden}
+#reviews .trail{width:460px;left:-220px;bottom:-170px}
+#reviews .wrap{position:relative}
+.reviews{display:grid;grid-template-columns:1.25fr 1fr;gap:72px;align-items:start}
+.lead-quote{font-size:clamp(28px,3.2vw,42px);line-height:1.22;letter-spacing:-.01em}
+.lead-quote cite,.small-quotes cite{display:block;font-style:normal;font-size:16px;color:var(--soft);margin-top:20px;letter-spacing:0}
+.small-quotes{display:grid;gap:36px;padding-top:10px}
+.small-quotes blockquote{font-size:18px;padding-left:24px;border-left:1.5px solid var(--line)}
+.small-quotes cite{margin-top:10px}
+
+/* area */
+#area{padding:112px 0;background:var(--sand)}
+.area{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:center}
+.area p{color:var(--soft);margin-bottom:28px;max-width:34ch}
+.hoods{list-style:none;padding:0;columns:2;column-gap:24px;font-size:18px;margin-bottom:32px}
+.hoods li{padding:6px 0;break-inside:avoid}
+.area .map{border-radius:24px;overflow:hidden;border:1px solid var(--line)}
+.area .map img{width:100%;aspect-ratio:7/4;object-fit:cover;object-position:0 50%}
+.textlink{font-weight:500;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px}
+
+/* about */
+#about{padding:120px 0}
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:72px}
+.about p{font-size:clamp(20px,1.8vw,24px);line-height:1.5;margin-bottom:24px;max-width:40ch}
+.about p.sign{font-size:18px;color:var(--soft)}
+
+/* book */
+#book{position:relative;padding:120px 0 128px;background:var(--ink);color:var(--cream);overflow:hidden}
+#book .bigpaw{position:absolute;right:max(-40px,calc((100vw - var(--max))/2 - 40px));bottom:-70px;width:min(420px,40vw);filter:invert(1);opacity:.16;pointer-events:none}
+#book .wrap{position:relative}
+#book h2{font-size:clamp(44px,6vw,84px);margin-bottom:24px;max-width:12ch}
+#book p{font-size:20px;color:#CFC8BC;max-width:40ch;margin-bottom:44px}
+#book .actions{display:flex;gap:14px;flex-wrap:wrap}
+#book .btn-line{border-color:#CFC8BC;color:var(--cream)}
+#book .btn-line:hover{background:var(--cream);color:var(--ink)}
+#book .direct{margin-top:48px;display:flex;gap:40px;flex-wrap:wrap;font-size:18px;color:#CFC8BC}
+#book .direct a{text-decoration:none;color:var(--cream)}
+
+footer{padding:40px 0 48px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:15px;color:var(--soft)}
+footer img{height:24px;width:auto}
+
+/* mobile action bar */
+.dock{display:none}
+
+/* walking-in paws */
+@media (prefers-reduced-motion:no-preference){
+  .hero-mark{animation:step .7s .1s both}
+  .hero h1{animation:rise .8s .15s both}
+  .hero p.lede,.hero .actions,.hero .from{animation:rise .8s .3s both}
+  .photo{animation:rise .9s .2s both}
+  .hero .trail{animation:fadep 1.6s .6s both}
+  @keyframes fadep{from{opacity:0}to{opacity:.09}}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  @keyframes step{0%{opacity:0;transform:translateY(10px) rotate(-8deg)}60%{opacity:1;transform:translateY(-4px) rotate(3deg)}100%{transform:none}}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+  .reveal.in{opacity:1;transform:none}
+}
+
+@media (max-width:900px){
+  body{font-size:17px}
+  .bar nav a.link{display:none}
+  .hero{padding:24px 0 72px}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .hero-mark{display:none}
+  .photo{order:-1;margin:0 calc(var(--gut)*-1)}
+  .photo img{border-radius:0;height:auto;aspect-ratio:4/3;object-position:50% 30%}
+  .hero .trail{display:none}
+  #book .bigpaw{width:240px;right:-50px;bottom:-40px}
+  .row{grid-template-columns:1fr auto;gap:12px 24px;padding:32px 0}
+  .row .desc{grid-column:1/-1;grid-row:2}
+  .reviews,.area,.about{grid-template-columns:1fr;gap:48px}
+  #services,#reviews,#area,#about,#book{padding-top:80px;padding-bottom:80px}
+  .area .map img{aspect-ratio:4/3;object-position:0 50%}
+  #reviews .trail{display:none}
+  footer{padding-bottom:110px}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+  .dock{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:8px;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;padding:8px;border-radius:999px;background:rgba(255,254,249,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 6px 30px rgba(47,43,38,.18);transform:translateY(140%);transition:transform .35s}
+  .dock.show{transform:none}
+  .dock a{height:48px;padding:0 12px;font-size:16px}
+  .dock .btn-line{border:none;background:var(--sand)}
+}
+@media (max-width:600px){
+  .bar nav .btn{display:none}
+}
+@media (max-width:420px){
+  .hero .actions .btn{flex:1}
+}
+@media (max-width:340px){
+  .hoods{columns:1}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Lucky Leash home"><img src="img/wordmark.png" alt="Lucky Leash dog walking"></a>
+    <nav>
+      <a class="link" href="#services">Prices</a>
+      <a class="link" href="#area">Where we walk</a>
+      <a class="link" href="#reviews">Reviews</a>
+      <a class="btn btn-book" href="#book">Book a meet-and-greet</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img class="trail" src="img/paws-mask.png" alt="" aria-hidden="true">
+    <img class="trail two" src="img/paws-mask.png" alt="" aria-hidden="true">
+    <div class="wrap">
+      <div>
+        <img class="hero-mark" src="img/paw-mark.png" alt="">
+        <h1>Dog walking in<br>North&nbsp;Toronto.</h1>
+        <p class="lede">Group walks, private walks and dog sitting around Yonge and Lawrence, with photo updates every&nbsp;day.</p>
+        <div class="actions">
+          <a class="btn btn-book" href="#book">Book a meet-and-greet</a>
+          <a class="btn btn-line" href="sms:+14377765003">Text 437-776-5003</a>
+        </div>
+        <p class="from">Group walks from <strong>$30</strong></p>
+      </div>
+      <div class="photo">
+        <img src="img/pom.jpg" alt="A fluffy white Pomeranian jumping up on its hind legs in autumn leaves" width="1296" height="1476">
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 class="reveal">Walks and sitting</h2>
+      <div class="list">
+        <div class="row reveal">
+          <h3>Group walk</h3>
+          <p class="desc"><b>On-leash</b> along sidewalks and nearby parks, for dogs who like company but stay close. <b>Off-leash</b> for adventurous pups who want to run, explore and play with other dogs in a safe, controlled space.</p>
+          <p class="price">$30<small>+ HST</small></p>
+        </div>
+        <div class="row reveal">
+          <h3>Private walk</h3>
+          <p class="desc">One-on-one and on-leash, at your dog’s pace. Calm and stress-free for dogs who are shy, reactive or just prefer their own space.</p>
+          <p class="price">$45<small>+ HST</small></p>
+        </div>
+        <div class="row reveal">
+          <h3>Dog sitting</h3>
+          <p class="desc">Day or overnight. We follow your dog’s diet, give plenty of bathroom breaks, take a one-hour walk each day and send you updates.</p>
+          <p class="price">$75<small>+ HST</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <img class="trail" src="img/paws-mask.png" alt="" aria-hidden="true">
+    <div class="wrap reviews">
+      <blockquote class="lead-quote reveal">
+        “Hands down the best dog walking service I’ve used. My energetic Husky, Luna, comes home happy and tired after every walk. I trust them completely.”
+        <cite>Emily R.</cite>
+      </blockquote>
+      <div class="small-quotes">
+        <blockquote class="reveal">“I was nervous about hiring a dog walker, but Lucky Leash put my worries to rest. Daisy gets the exercise she needs, and I get daily updates with pictures.”<cite>Tom L.</cite></blockquote>
+        <blockquote class="reveal">“A lifesaver! Max absolutely adores his walks. Always on time, professional and caring.”<cite>Sarah W.</cite></blockquote>
+        <blockquote class="reveal">“They treat my pup like family. Couldn’t ask for a better service.”<cite>Mark P.</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="area">
+    <div class="wrap area">
+      <div class="reveal">
+        <h2>Where we walk</h2>
+        <p>North Toronto, from Eglinton up to York Mills.</p>
+        <ul class="hoods">
+          <li>Yonge and Lawrence</li>
+          <li>Lawrence Park</li>
+          <li>Bedford Park</li>
+          <li>Sherwood Park</li>
+          <li>Lawrence Manor</li>
+          <li>Ledbury Park</li>
+          <li>Forest Hill North</li>
+          <li>Bridle Path</li>
+        </ul>
+        <a class="textlink" href="sms:+14377765003">Not sure you’re in range? Text us your street.</a>
+      </div>
+      <div class="map reveal">
+        <img src="img/map.jpg" alt="Map of the Lucky Leash service area in North Toronto, shaded from Eglinton Avenue to York Mills Road">
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <h2 class="reveal">Every dog, like our own</h2>
+      <div class="reveal">
+        <p>Every dog deserves love, attention and plenty of exercise. Whether your pup needs a quick stroll or an energetic adventure, we’re reliable, on time and in touch the whole way.</p>
+        <p>Let us take the leash, so you can get on with your day knowing your dog is in good hands.</p>
+        <p class="sign">Happy pups, happy owners.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <img class="bigpaw" src="img/paw-mark.png" alt="" aria-hidden="true">
+    <div class="wrap">
+      <h2 class="reveal">Let’s meet your pup.</h2>
+      <p class="reveal">Tell us your dog’s name, age and neighbourhood. We’ll set up a time to meet at your home and plan the walks that suit them.</p>
+      <div class="actions reveal">
+        <a class="btn btn-book" href="sms:+14377765003?&body=Hi%20Lucky%20Leash!%20My%20dog%E2%80%99s%20name%20is%20___%2C%20age%20___%2C%20and%20we%E2%80%99re%20near%20___.%20We%E2%80%99re%20interested%20in%20___.">Text us</a>
+        <a class="btn btn-line" href="mailto:LuckyLeashAdventures@gmail.com?subject=Meet-and-greet&body=Dog%E2%80%99s%20name%3A%0AAge%20and%20breed%3A%0ANeighbourhood%3A%0AGroup%20walk%2C%20private%20walk%20or%20sitting%3A%0ABest%20days%3A">Email us</a>
+      </div>
+      <div class="direct reveal">
+        <a href="tel:+14377765003">437-776-5003</a>
+        <a href="mailto:LuckyLeashAdventures@gmail.com">LuckyLeashAdventures@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/wordmark.png" alt="Lucky Leash dog walking">
+    <span>© 2026 Lucky Leash Dog Walking, Toronto</span>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Quick contact">
+  <a class="btn btn-line" href="tel:+14377765003">Call</a>
+  <a class="btn btn-line" href="sms:+14377765003">Text</a>
+  <a class="btn btn-book" href="#book">Book</a>
+</nav>
+
+<script>
+const header=document.querySelector('header'),dock=document.querySelector('.dock'),book=document.getElementById('book');
+let bookVisible=false;
+new IntersectionObserver(e=>{bookVisible=e[0].isIntersecting;onScroll()}).observe(book);
+function onScroll(){const y=scrollY;header.classList.toggle('scrolled',y>8);dock.classList.toggle('show',y>500&&!bookVisible)}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
